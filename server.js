@@ -34,7 +34,7 @@ app.get('/api/robots', (req, res) => {
     try {
         res.status(200).send(bots)
     } catch (error) {
-        rollbar.critical('ERROR TRIED GETTING BOTS BUT WAS UNSUCCESSFUL')
+        rollbar.error('ERROR TRIED GETTING BOTS BUT WAS UNSUCCESSFUL')
         console.log('ERROR GETTING BOTS', error)
         res.sendStatus(400)
     }
